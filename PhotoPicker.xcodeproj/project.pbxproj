@@ -11,6 +11,8 @@
 		F211D1AD2C4EE8B1000E44E1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F211D1AC2C4EE8B1000E44E1 /* ContentView.swift */; };
 		F211D1AF2C4EE8B2000E44E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F211D1AE2C4EE8B2000E44E1 /* Assets.xcassets */; };
 		F211D1B22C4EE8B2000E44E1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F211D1B12C4EE8B2000E44E1 /* Preview Assets.xcassets */; };
+		F211D1BA2C4EEABF000E44E1 /* PickYourImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F211D1B92C4EEABF000E44E1 /* PickYourImageView.swift */; };
+		F211D1BC2C4EF3C5000E44E1 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F211D1BB2C4EF3C5000E44E1 /* CameraView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,9 @@
 		F211D1AC2C4EE8B1000E44E1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F211D1AE2C4EE8B2000E44E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F211D1B12C4EE8B2000E44E1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F211D1B82C4EEA00000E44E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F211D1B92C4EEABF000E44E1 /* PickYourImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickYourImageView.swift; sourceTree = "<group>"; };
+		F211D1BB2C4EF3C5000E44E1 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +56,13 @@
 		F211D1A92C4EE8B1000E44E1 /* PhotoPicker */ = {
 			isa = PBXGroup;
 			children = (
+				F211D1B82C4EEA00000E44E1 /* Info.plist */,
 				F211D1AA2C4EE8B1000E44E1 /* PhotoPickerApp.swift */,
 				F211D1AC2C4EE8B1000E44E1 /* ContentView.swift */,
+				F211D1B92C4EEABF000E44E1 /* PickYourImageView.swift */,
 				F211D1AE2C4EE8B2000E44E1 /* Assets.xcassets */,
 				F211D1B02C4EE8B2000E44E1 /* Preview Content */,
+				F211D1BB2C4EF3C5000E44E1 /* CameraView.swift */,
 			);
 			path = PhotoPicker;
 			sourceTree = "<group>";
@@ -137,8 +145,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F211D1BA2C4EEABF000E44E1 /* PickYourImageView.swift in Sources */,
 				F211D1AD2C4EE8B1000E44E1 /* ContentView.swift in Sources */,
 				F211D1AB2C4EE8B1000E44E1 /* PhotoPickerApp.swift in Sources */,
+				F211D1BC2C4EF3C5000E44E1 /* CameraView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +285,9 @@
 				DEVELOPMENT_TEAM = M46W996KF7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PhotoPicker/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need your permission to use the camera";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need your permission to access your photo library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +317,9 @@
 				DEVELOPMENT_TEAM = M46W996KF7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PhotoPicker/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need your permission to use the camera";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need your permission to access your photo library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
