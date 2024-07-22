@@ -9,10 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var isPickerPresented = false
+    @State private var isCameraPresented = false
     @State private var selectedImage: UIImage?
 
     var body: some View {
         VStack {
+            // Display the selected image if there is one
             if let image = selectedImage {
                 Image(uiImage: image)
                     .resizable()
@@ -25,6 +27,7 @@ struct ContentView: View {
                     .font(.headline)
             }
 
+            // Button to pick a photo from the gallery
             Button(action: {
                 isPickerPresented = true
             }) {
@@ -37,15 +40,33 @@ struct ContentView: View {
                     .cornerRadius(30)
             }
             .padding()
+            .sheet(isPresented: $isPickerPresented) {
+                PickYourImageView(selectedImage: $selectedImage)
+            }
+
+            // Button to take a new photo with the camera
+            Button(action: {
+                isCameraPresented = true
+            }) {
+                Text("Take a photo")
+                    .font(.headline)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.green)
+                    .foregroundColor(.white)
+                    .cornerRadius(30)
+            }
+            .padding()
+            .sheet(isPresented: $isCameraPresented) {
+                CameraView(selectedImage: $selectedImage)
+            }
         }
         .padding()
-        .sheet(isPresented: $isPickerPresented) {
-            PickYourImageView(selectedImage: $selectedImage)
-        }
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
-
